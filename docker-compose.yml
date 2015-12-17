@@ -2,6 +2,7 @@ elasticsearch_data:
   image: busybox
   volumes:
     - /usr/share/elasticsearch/data
+  command: sh -c "while true; do echo "hello"; sleep 1d; done;"
 
 elasticsearch:
   image: elasticsearch:2.1
