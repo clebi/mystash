@@ -20,7 +20,6 @@ logstash:
     - elasticsearch
   volumes:
     - ./logstash_config:/config-dir
-    - /var/lib/certs/mystash/:/certs
   entrypoint: logstash -f /config-dir/logstash.conf
   ports:
     - 5698:5698
